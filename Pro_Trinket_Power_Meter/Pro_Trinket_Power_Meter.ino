@@ -15,7 +15,6 @@
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_INA219.h>
 
-
 // Configure the pin connected OLED reset/RST.
 #define OLED_RESET   4
 
@@ -26,9 +25,8 @@
 // Configure how long before switching mode (in seconds)
 #define MODE_SWITCH  5
 
-
 // Create OLED and INA219 globals.
-Adafruit_SSD1306 display(OLED_RESET);
+Adafruit_SSD1306 display(128, 32, &Wire, OLED_RESET);
 Adafruit_INA219 ina219;
 
 // Keep track of total time and milliamp measurements for milliamp-hour computation.
